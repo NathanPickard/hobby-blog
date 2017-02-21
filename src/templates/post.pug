@@ -1,18 +1,14 @@
-doctype html
-html(lang="en")
-  head
-  title Post Page
-body
-  section.post
-    .container.text-right
-      a(href="").text-faded view all
-      .row
-        .col-lg-8.col-lg-offset-2.text-center
-          h2.section-heading I like to code!
+extends ./layout.pug
+block content
+        section.post
+            .container
+                .row
+                    .col-lg-8.col-lg-offset-2.text-center
+                        h2.section-heading #{post.title}
 
-          hr.light
+                        hr.light
 
-          p.text-faded
-            | Occupy polaroid selvage, etsy fixie sustainable DIY yuccie farm-to-table helvetica live-edge mustache brooklyn slow-carb.
-          .article
-            | Occupy polaroid selvage, etsy fixie sustainable DIY yuccie farm-to-table helvetica live-edge mustache brooklyn slow-carb.
+                        p.text-faded
+                            | #{post.description}
+                        .article
+                            | #{post.description}
